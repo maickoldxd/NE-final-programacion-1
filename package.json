@@ -4,13 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass",
-		"sass:watch": "sass --watch assets/scss/style.scss  assets/css/style.css"
+    "start": "start http://localhost:3000 && serve"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.69.5"
+    "serve": "^14.2.1"
   }
 }
