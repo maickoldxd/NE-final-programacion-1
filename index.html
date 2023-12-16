@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce - Sahumerio santo</title>
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Venta de sahumerios santos y orgánicos. Delivery en CABA. Los mejores sahumerios"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="drawer drawer-end">
+      <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+
+      <div class="drawer-content">
+        <nav class="navbar bg-violet-200">
+          <div class="container mx-auto">
+            <div class="flex-1">
+              <a class="btn btn-ghost text-3xl font-bold">San Sahumerio</a>
+            </div>
+            <div class="flex-none">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Servicios</a></li>
+                <li><a>Nosotros</a></li>
+                <li><a>Contacto</a></li>
+                <li>
+                  <label for="my-drawer-4" class="drawer-button btn btn-ghost">
+                    <span class="material-symbols-rounded">
+                      shopping_cart
+                    </span>
+                    <div id="cart-counter" class="badge bg-violet-400">0</div>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <main class="container mx-auto mt-10">
+          <h1 class="text-2xl font-bold">Nuestros productos</h1>
+
+          <section class="flex my-3 justify-end">
+            <select
+              id="sort-method"
+              class="select select-primary w-full max-w-xs"
+              aria-label="Default select example"
+            >
+              <option value="default">Ordenar...</option>
+              <option value="desc">Mayor precio</option>
+              <option value="asc">Menor precio</option>
+              <option value="abc">Alfabeticamente</option>
+            </select>
+          </section>
+          <section class="grid grid-cols-4 md: gap-6" id="product-list">
+            <figure
+              class="card card-compact h-auto bg-base-200 hover:shadow-md transition ease-in-out duration-300 cursor-pointer"
+            >
+              <img
+                src="./assets/img/difusores/difusor-mora.png"
+                alt="Sahumerio"
+              />
+              <div class="card-body">
+                <figcaption class="card-title">cahumerio zopero</figcaption>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div class="card-actions justify-between items-center">
+                  <h4 class="text-2xl font-semibold price">$12300</h4>
+                  <button
+                    class="btn bg-violet-300 add-to-card"
+                    onclick="handleAddToShoppingCart(event)"
+                  >
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </figure>
+
+            <figure
+              class="card card-compact h-auto bg-base-200 hover:shadow-md transition ease-in-out duration-300 cursor-pointer"
+            >
+              <img
+                src="./assets/img/difusores/disufor-aromatico-coleccion-lar.jpeg"
+                alt="Sahumerio"
+              />
+              <div class="card-body">
+                <figcaption class="card-title">cahumerio sanasto</figcaption>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div class="card-actions justify-between items-center">
+                  <h4 class="text-2xl font-semibold price">$1300</h4>
+                  <button
+                    class="btn bg-violet-300 add-to-card"
+                    onclick="handleAddToShoppingCart(event)"
+                  >
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </figure>
+
+            <figure
+              class="card card-compact h-auto bg-base-200 hover:shadow-md transition ease-in-out duration-300 cursor-pointer"
+            >
+              <img
+                src="./assets/img/difusores/disufor-aromatico-coleccion-relax.jpeg"
+                alt="Sahumerio"
+              />
+              <div class="card-body">
+                <figcaption class="card-title">cahumerio sanasto</figcaption>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div class="card-actions justify-between items-center">
+                  <h4 class="text-2xl font-semibold price">$1000</h4>
+                  <button
+                    class="btn bg-violet-300 add-to-card"
+                    onclick="handleAddToShoppingCart(event)"
+                  >
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </figure>
+
+            <figure
+              class="card card-compact h-auto bg-base-200 hover:shadow-md transition ease-in-out duration-300 cursor-pointer"
+            >
+              <img
+                src="./assets/img/difusores/disufor-aromatico-coleccion-zoila.jpeg"
+                alt="Sahumerio"
+              />
+              <div class="card-body">
+                <figcaption class="card-title">bsoed dinamico</figcaption>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div class="card-actions justify-between items-center">
+                  <h4 class="text-2xl font-semibold price">$4300</h4>
+                  <button
+                    class="btn bg-violet-300 add-to-card"
+                    onclick="handleAddToShoppingCart(event)"
+                  >
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </figure>
+
+            <figure
+              class="card card-compact h-auto bg-base-200 hover:shadow-md transition ease-in-out duration-300 cursor-pointer"
+            >
+              <img
+                class="rounded-xl"
+                src="./assets/img/difusores/disufor-aromatico-coleccion-ambar.jpeg"
+                alt="Sahumerio"
+              />
+              <div class="card-body">
+                <figcaption class="card-title">cahumerio sanasto</figcaption>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div class="card-actions justify-between items-center">
+                  <h4 class="text-2xl font-semibold price">$2300</h4>
+                  <button
+                    class="btn bg-violet-300 add-to-card"
+                    onclick="handleAddToShoppingCart(event)"
+                  >
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </figure>
+
+            <figure
+              class="card card-compact h-auto bg-base-200 hover:shadow-md transition ease-in-out duration-300 cursor-pointer"
+            >
+              <img
+                src="./assets/img/difusores/difusor-mora.png"
+                alt="Sahumerio"
+              />
+              <div class="card-body">
+                <figcaption class="card-title">cahumerio sanasto</figcaption>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div class="card-actions justify-between items-center">
+                  <h4 class="text-2xl font-semibold price">$3000</h4>
+                  <button
+                    class="btn bg-violet-300 add-to-card"
+                    onclick="handleAddToShoppingCart(event)"
+                  >
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </figure>
+
+            <figure
+              class="card card-compact h-auto bg-base-200 hover:shadow-md transition ease-in-out duration-300 cursor-pointer"
+            >
+              <img
+                src="./assets/img/difusores/difusor-mora.png"
+                alt="Sahumerio"
+              />
+              <div class="card-body">
+                <figcaption class="card-title">saladero sanasto</figcaption>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div class="card-actions justify-between items-center">
+                  <h4 class="text-2xl font-semibold price">$5800</h4>
+                  <button
+                    class="btn bg-violet-300 add-to-card"
+                    onclick="handleAddToShoppingCart(event)"
+                  >
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </figure>
+
+            <figure
+              class="card card-compact h-auto bg-base-200 hover:shadow-md transition ease-in-out duration-300 cursor-pointer"
+            >
+              <img
+                src="./assets/img/difusores/disufor-aromatico-coleccion-zoila.jpeg"
+                alt="Sahumerio"
+              />
+              <div class="card-body">
+                <figcaption class="card-title">cahumerio sanasto</figcaption>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div class="card-actions justify-between items-center">
+                  <h4 class="text-2xl font-semibold price">$200</h4>
+                  <button
+                    class="btn bg-violet-300 add-to-card"
+                    onclick="handleAddToShoppingCart(event)"
+                  >
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </figure>
+
+            <figure
+              class="card card-compact h-auto bg-base-200 hover:shadow-md transition ease-in-out duration-300 cursor-pointer"
+            >
+              <img
+                src="./assets/img/difusores/disufor-aromatico-coleccion-zoila.jpeg"
+                alt="Sahumerio"
+              />
+              <div class="card-body">
+                <figcaption class="card-title">cahumerio sanasto</figcaption>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div class="card-actions justify-between items-center">
+                  <h4 class="text-2xl font-semibold price">$100</h4>
+                  <button
+                    class="btn bg-violet-300 add-to-card"
+                    onclick="handleAddToShoppingCart(event)"
+                  >
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </figure>
+
+            <figure
+              class="card card-compact h-auto bg-base-200 hover:shadow-md transition ease-in-out duration-300 cursor-pointer"
+            >
+              <img
+                src="./assets/img/difusores/disufor-aromatico-coleccion-zoila.jpeg"
+                alt="Sahumerio"
+              />
+              <div class="card-body">
+                <figcaption class="card-title">cahumerio sanasto</figcaption>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div class="card-actions justify-between items-center">
+                  <h4 class="text-2xl font-semibold price">$43300</h4>
+                  <button
+                    class="btn bg-violet-300 add-to-card"
+                    onclick="handleAddToShoppingCart(event)"
+                  >
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </figure>
+
+            <figure
+              class="card card-compact h-auto bg-base-200 hover:shadow-md transition ease-in-out duration-300 cursor-pointer"
+            >
+              <img
+                src="./assets/img/difusores/disufor-aromatico-coleccion-zoila.jpeg"
+                alt="Sahumerio"
+              />
+              <div class="card-body">
+                <figcaption class="card-title">cahumerio sanasto</figcaption>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div class="card-actions justify-between items-center">
+                  <h4 class="text-2xl font-semibold price">$199</h4>
+                  <button
+                    class="btn bg-violet-300 add-to-card"
+                    onclick="handleAddToShoppingCart(event)"
+                  >
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </figure>
+            <figure
+              class="card card-compact h-auto bg-base-200 hover:shadow-md transition ease-in-out duration-300 cursor-pointer"
+            >
+              <img
+                src="./assets/img/difusores/disufor-aromatico-coleccion-zoila.jpeg"
+                alt="Sahumerio"
+              />
+              <div class="card-body">
+                <figcaption class="card-title">cahumerio sanasto</figcaption>
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div class="card-actions justify-between items-center">
+                  <h4 class="text-2xl font-semibold price">$9000</h4>
+                  <button
+                    class="btn bg-violet-300 add-to-card"
+                    onclick="handleAddToShoppingCart(event)"
+                  >
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </figure>
+          </section>
+          <div
+            id="toast"
+            class="toast invisible transition duration-300 ease-in-out"
+          >
+            <div class="alert bg-violet-200">
+              <span class="font-bold">Añadido al carrito</span>
+            </div>
+          </div>
+        </main>
+      </div>
+      <div class="drawer-side">
+        <label
+          for="my-drawer-4"
+          aria-label="close sidebar"
+          class="drawer-overlay"
+        ></label>
+        <div
+          class="menu p-4 w-80 min-h-full bg-base-200 text-base-content flex flex-column justify-between"
+        >
+          <div>
+            <h2 class="text-2xl font-bold">Mi carrito de compras</h2>
+            <ul id="shopping-cart-container" class="min-h-full">
+              <li id="cart-product-listed" class="hidden">
+                <h4 class="text-xl"></h4>
+                <div class="flex justify-between">
+                  <span id="cart-product-quantity"></span>
+                  <span id="cart-product-price" class="text-lg"></span>
+                </div>
+                <div class="divider"></div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="divider"></div>
+            <div class="flex justify-between mb-10">
+              <h4 class="font-bold text-xl">TOTAL:</h4>
+              <h4 id="cart-total" class="font-bold text-xl">$12903</h4>
+            </div>
+            <div class="divider"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/lib.js"></script>
+  </body>
+</html>

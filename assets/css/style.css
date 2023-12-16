@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500&display=swap");
+* {
+  font-family: "Mulish", sans-serif;
+}
+
+.bg-pink {
+  background-color: #ff1493;
+  color: rgb(240, 236, 236);
+}
+
+h1, h2, h3 {
+  color: #ff1493;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+/* inicia nav */
+.botonera {
+  background-color: #ff1493;
+}
+.botonera img {
+  width: 150px;
+}
+.botonera a {
+  color: rgb(240, 236, 236);
+}
+.botonera svg {
+  width: 30px;
+  fill: rgb(240, 236, 236);
+}
+
+.filters button {
+  border: none;
+  background-color: #ff1493;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+.filters button svg {
+  width: 20px;
+  fill: rgb(240, 236, 236);
+}
+.filters input {
+  border-radius: 8px;
+}
+
+/*# sourceMappingURL=style.css.map */
